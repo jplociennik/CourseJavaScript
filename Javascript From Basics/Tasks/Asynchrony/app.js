@@ -37,14 +37,11 @@ function stoperHandle() {
         }
         else {
             date = addMilliseconds(date, STOPER_GAP);
-            let year = date.getYear() - 69 === 0 ? '' : (date.getYear() - 69 <= 9 ? `${date.getYear() - 69}:` : `${date.getYear() - 69}:`);
-            let month = date.getMonth() - 1 === 0 ? '' : (date.getMonth() - 1 <= 9 ? `0${date.getMonth() - 1}:` : `${date.getMonth() - 1}:`);
-            let day = date.getDay() - 1 === 0 ? '' : (date.getDay() - 1 <= 9 ? `0${date.getDay() - 1}:` : `${date.getDay() - 1}:`);
             let hours = date.getHours() - 1 === 0 ? '' : (date.getHours() - 1 <= 9 ? `0${date.getHours() - 1}:` : `${date.getHours() - 1}:`);
             let minutes = date.getMinutes() === 0 ? '' : (date.getMinutes() <= 9 ? `0${date.getMinutes()}:` : `${date.getMinutes()}:`);
             let seconds = date.getSeconds() <= 9 ? '0' + date.getSeconds() : date.getSeconds();
             let milliseconds = (date.getMilliseconds() <= 9 ? '0' + date.getMilliseconds() : date.getMilliseconds()) / 10;
-            stoperTime.innerText = `${year}${month}${day}${hours}${minutes}${seconds}:${milliseconds}`
+            stoperTime.innerText = `${hours}${minutes}${seconds}:${milliseconds}`
         }
     
     }, STOPER_GAP)
