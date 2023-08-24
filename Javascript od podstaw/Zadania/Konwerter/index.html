@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS od podstaw</title>
+</head>
+<body>
+    <h2 id="converterHeadline" > Konwerter jednostek </h2>
+    <p class="converterText" > Wybierz jednostki </p>
+
+    <div id="units">
+        <button data-is-time-unit="1" class="converterBtn converterBtnMarked" id="timeUnitBtn"> Godziny / Minuty </button>
+        <button data-is-time-unit="0" class="converterBtn" id="measurementUnitBtn"> Kilometry / Mile </button>
+    </div>
+
+    <p class="converterText" > Kierunek konwersji: </p>
+ 
+    <div id="direction">
+        <button data-direction="true" class="converterBtn converterBtnMarked" id="rightDirectionBtn"> W prawo </button>
+        <button data-direction="false" class="converterBtn" id="leftDirectionBtn"> W lewo </button>
+    </div>
+
+    <p class="converterText"> Wynik: </p>
+
+    <input class="converterInput" id="leftInput"> 
+    <span id="directionArrow">===></span> 
+    <input class="converterInput" id="rightInput" disabled="true"> 
+    <button class="converterBtn" id="calculateBtn"> Przelicz </button>
+
+    <p id="warning"></p>
+
+    <link href="styles.css" rel="stylesheet">
+    <script src="app.js"></script>
+</body>
+
+</html>
